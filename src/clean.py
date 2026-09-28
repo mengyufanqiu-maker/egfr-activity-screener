@@ -34,6 +34,7 @@ def clean_activities(raw: pd.DataFrame) -> pd.DataFrame:
     # 1) require a structure and a numeric activity value
     if "canonical_smiles" not in df.columns:
         raise KeyError("activity payload is missing 'canonical_smiles'; check the ChEMBL schema")
+    df = df[df["canonical_smiles"].notna()]
     df = df[df["canonical_smiles"].astype(str).str.strip().ne("")]
     df["standard_value"] = pd.to_numeric(df["standard_value"], errors="coerce")
     df = df[df["standard_value"].notna()]
