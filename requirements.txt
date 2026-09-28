@@ -1,0 +1,10 @@
+# EGFR Activity Screener — dependencies
+# Only the standard scientific Python stack is required. Molecular descriptors
+# are taken from ChEMBL's curated `molecule_properties`, so no cheminformatics
+# library (e.g. RDKit) is needed.
+pandas>=2.0
+numpy>=1.24
+requests>=2.28
+matplotlib>=3.7
+seaborn>=0.12
+openpyxl>=3.1
