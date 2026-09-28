@@ -21,6 +21,8 @@ screening workflow.
 | Potent (pIC50 ≥ 7, i.e. IC50 ≤ 100 nM) | 6,936 |
 | **Screened hits (potent + drug-like)** | **4,413** |
 
+![Screening funnel](figures/04_screening_funnel.png)
+
 ### Validation against approved drugs
 
 5 of 6 approved EGFR inhibitors are recovered as hits (gefitinib, erlotinib,
@@ -32,7 +34,9 @@ expected and explainable exception. See `data/processed/validation_known_drugs.c
 ### QSAR model
 
 A random forest on ECFP4 fingerprints predicts pIC50 with **R² = 0.72**,
-RMSE = 0.74, MAE = 0.51 (n = 11,859 compounds). See `results/plots/05_qsar_parity.png`.
+RMSE = 0.74, MAE = 0.51 (n = 11,859 compounds).
+
+![QSAR parity plot](figures/05_qsar_parity.png)
 
 ### Selectivity & structural diversity
 
@@ -40,6 +44,8 @@ Among 2,323 compounds tested against both EGFR and HER2: 1,052 dual, 398
 EGFR-selective, 108 HER2-selective. The most common hit scaffold is the
 **4-anilinoquinazoline** core shared by gefitinib/erlotinib/lapatinib — direct
 evidence that the screen recovers the known EGFR pharmacophore.
+
+![EGFR vs HER2 selectivity](figures/06_egfr_her2_selectivity.png)
 
 ## What it does
 
